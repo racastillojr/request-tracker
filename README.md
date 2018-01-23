@@ -11,4 +11,7 @@ instance pointing to the actual file.
 
 <b>rtctl.py:</b>
 This script assumes you are using postfix. It blocks spammers for all instances hosted on your server by rejecting mail at /etc/postfix/access. This script will eventually have several argument to perform other tasks.
+Also, make sure you have the following defined in /etc/postfix/main.cf
+
+smtpd_sender_restrictions = hash:/etc/postfix/access
 
