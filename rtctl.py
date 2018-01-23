@@ -45,7 +45,7 @@ if args.block_sender:
     access_file.write(block_content)
     access_file.close()
 
-    print("Restarting postfix")
-    os.system("service postfix restart")
+    print("Reload access file")
+    os.system("postmap /etc/postfix/access")
     print("\n"+args.block_sender+" has been added to /etc/postfix/access")
 
